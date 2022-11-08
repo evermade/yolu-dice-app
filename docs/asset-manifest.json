@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.61def11e.css",
-    "main.js": "/static/js/main.b8a8bdc3.js",
-    "static/js/787.9682c79d.chunk.js": "/static/js/787.9682c79d.chunk.js",
-    "index.html": "/index.html",
-    "main.61def11e.css.map": "/static/css/main.61def11e.css.map",
-    "main.b8a8bdc3.js.map": "/static/js/main.b8a8bdc3.js.map",
-    "787.9682c79d.chunk.js.map": "/static/js/787.9682c79d.chunk.js.map"
+    "main.css": "/yolu-dice-app/static/css/main.61def11e.css",
+    "main.js": "/yolu-dice-app/static/js/main.eed6dead.js",
+    "static/js/787.9682c79d.chunk.js": "/yolu-dice-app/static/js/787.9682c79d.chunk.js",
+    "index.html": "/yolu-dice-app/index.html",
+    "main.61def11e.css.map": "/yolu-dice-app/static/css/main.61def11e.css.map",
+    "main.eed6dead.js.map": "/yolu-dice-app/static/js/main.eed6dead.js.map",
+    "787.9682c79d.chunk.js.map": "/yolu-dice-app/static/js/787.9682c79d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.61def11e.css",
-    "static/js/main.b8a8bdc3.js"
+    "static/js/main.eed6dead.js"
   ]
 }
