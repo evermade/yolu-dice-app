@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import "./App.css";
 
 function App() {
+  const [face, setFace] = useState(1 + Math.floor(Math.random() * 5));
+
+  const throwx = () => {
+    const index = 1 + Math.floor(Math.random() * 5);
+    setFace(index);
+  };
+
   return (
     <div>
       <div className="decorators">
@@ -13,12 +20,15 @@ function App() {
       </div>
       <motion.div
         className="diceWrap"
-        whileHover={{ scale: 1.2 }}
-        whileTap={{ scale: 1.1 }}
+        whileTap={{ scale: 1.5, cursor: "grabbing" }}
         drag="y"
-        dragConstraints={{ top: -10, bottom: 10 }}
+        dragSnapToOrigin
+        dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
+        onDragEnd={() => throwx()}
+        dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+        dragElastic={0.6}
       >
-        <div className="dice rolling">
+        <div className={`dice face-${face} `}>
           <div className="diceFace front"></div>
           <div className="diceFace up"></div>
           <div className="diceFace left"></div>
@@ -27,6 +37,10 @@ function App() {
           <div className="diceFace back"></div>
         </div>
       </motion.div>
+      <motion.div
+        className="shadow"
+        whileTap={{ scale: 1.5, cursor: "grabbing" }}
+      ></motion.div>
     </div>
   );
 }
