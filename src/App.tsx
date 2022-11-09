@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   const [face, setFace] = useState(1 + Math.floor(Math.random() * 5));
-  const [tapping, setTapping] = useState(false);
+  // const [tapping, setTapping] = useState(false);
 
   const throwx = () => {
     const index = 1 + Math.floor(Math.random() * 5);
@@ -28,8 +28,8 @@ function App() {
         onDragEnd={() => throwx()}
         dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
         dragElastic={0.6}
-        onTapStart={() => setTapping(true)}
-        onTap={() => setTapping(false)}
+        // onTapStart={() => setTapping(true)}
+        // onTap={() => setTapping(false)}
       >
         <div className={`dice face-${face} `}>
           <div className="diceFace front"></div>
@@ -40,15 +40,6 @@ function App() {
           <div className="diceFace back"></div>
         </div>
       </motion.div>
-      <motion.div
-        animate={{
-          scale: tapping ? 1.2 : 1,
-        }}
-        transition={{
-          duration: 0.2,
-        }}
-        className="shadow"
-      />
     </div>
   );
 }

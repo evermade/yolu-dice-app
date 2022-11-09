@@ -11,18 +11,6 @@ body {
   left: calc(50% - 100px);
 }
 
-.shadow {
-  position: absolute;
-  content: "";
-  width: 170px;
-  height: 20px;
-  margin: auto;
-  inset: auto 0 10px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 100%;
-  filter: blur(10px);
-}
-
 .diceFace {
   box-sizing: border-box;
   position: absolute;
