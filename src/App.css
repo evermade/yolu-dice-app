@@ -14,14 +14,13 @@ body {
 .shadow {
   position: absolute;
   content: "";
-  width: 70%;
-  height: 10%;
-  /* top: 90%; */
-  left: 15%;
+  width: 170px;
+  height: 20px;
+  margin: auto;
+  inset: auto 0 10px;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 100%;
   filter: blur(10px);
-  bottom: 0;
 }
 
 .diceFace {
