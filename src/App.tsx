@@ -5,15 +5,18 @@ import "./App.css";
 
 function App() {
   const [face, setFace] = useState(1 + Math.floor(Math.random() * 5));
-  // const [tapping, setTapping] = useState(false);
+  const [angle, setAngle] = useState(180);
 
-  const throwx = () => {
+  const roll = () => {
     const index = 1 + Math.floor(Math.random() * 5);
+    const newAngle = Math.floor(Math.random() * 8) * 360  + 180;
+
     setFace(index);
+    setAngle(newAngle);
   };
 
   return (
-    <div>
+    <div style={{ "--angle": `${angle}deg` } as React.CSSProperties}>
       <div className="decorators">
         <div className="decorator"></div>
         <div className="decorator"></div>
@@ -24,12 +27,9 @@ function App() {
         whileTap={{ scale: 1.5, cursor: "grabbing" }}
         drag="y"
         dragSnapToOrigin
-        dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-        onDragEnd={() => throwx()}
+        dragTransition={{ bounceStiffness: 400, bounceDamping: 10 }}
+        onDragEnd={() => roll()}
         dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
-        dragElastic={0.6}
-        // onTapStart={() => setTapping(true)}
-        // onTap={() => setTapping(false)}
       >
         <div className={`dice face-${face} `}>
           <div className="diceFace front"></div>

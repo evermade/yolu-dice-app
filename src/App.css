@@ -78,6 +78,7 @@ body {
 .right {
   transform: rotateY(90deg) translateZ(50px);
 }
+
 .right::after {
   margin: -30px 0 0 -30px;
   background-color: #fff;
@@ -87,6 +88,7 @@ body {
 .bottom {
   transform: rotateX(-90deg) translateZ(50px);
 }
+
 .bottom::after {
   margin: -36px 0 0 -36px;
   box-shadow: 26px 26px #fff, 52px 52px #fff, 52px 0px #fff, 0px 52px #fff;
@@ -109,8 +111,31 @@ body {
   top: calc(50% - 50px);
   left: calc(50% - 50px);
   transform-style: preserve-3d;
-  transform: rotate3d(0, 0.9, 0.9, 90deg);
   transition: 3s cubic-bezier(0.42, 1.57, 0.62, 0.86);
+}
+
+.face-1 {
+  transform: rotate3d(-0.1, 0.3, -1, 180deg) rotateX(var(--angle)) rotateY(var(--angle))  ;
+}
+
+.face-2 {
+  transform: rotate3d(-0.1, 0.6, -0.4, 180deg) rotateX(var(--angle)) rotateY(var(--angle))  ;
+}
+
+.face-3 {
+  transform: rotate3d(-0.85, -0.42, 0.73, 180deg) rotateX(var(--angle)) rotateY(var(--angle))  ;
+}
+
+.face-4 {
+  transform: rotate3d(-0.8, 0.3, -0.75, 180deg) rotateX(var(--angle)) rotateY(var(--angle))  ;
+}
+
+.face-5 {
+  transform: rotate3d(0.3, 0.45, 0.9, 180deg) rotateX(var(--angle)) rotateY(var(--angle))  ;
+}
+
+.face-6 {
+  transform: rotate3d(-0.16, 0.6, 0.18, 180deg) rotateX(var(--angle)) rotateY(var(--angle))  ;
 }
 
 .decorators {
@@ -125,40 +150,4 @@ body {
 .decorator {
   width: 1px;
   background-color: #d4d1d1;
-}
-
-.face-1 {
-  transform: rotate3d(-0.1, 0.3, -1, 180deg);
-}
-
-.face-2 {
-  transform: rotate3d(-0.1, 0.6, -0.4, 180deg);
-}
-
-.face-3 {
-  transform: rotate3d(-0.85, -0.42, 0.73, 180deg);
-}
-
-.face-4 {
-  transform: rotate3d(-0.8, 0.3, -0.75, 180deg);
-}
-
-.face-5 {
-  transform: rotate3d(0.3, 0.45, 0.9, 180deg);
-}
-
-.face-6 {
-  transform: rotate3d(-0.16, 0.6, 0.18, 180deg);
-}
-
-@keyframes spinner {
-  0% {
-    transform: rotate3d(1, 1, 1, 0deg);
-  }
-  50% {
-    transform: rotate3d(1, 1, 1, 180deg);
-  }
-  100% {
-    transform: rotate3d(1, 1, 1, 360deg);
-  }
 }
