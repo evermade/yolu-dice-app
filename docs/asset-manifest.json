@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/yolu-dice-app/static/css/main.f5e8d7fc.css",
+    "main.css": "/yolu-dice-app/static/css/main.203630c6.css",
     "main.js": "/yolu-dice-app/static/js/main.9031d98b.js",
     "index.html": "/yolu-dice-app/index.html",
-    "main.f5e8d7fc.css.map": "/yolu-dice-app/static/css/main.f5e8d7fc.css.map",
+    "main.203630c6.css.map": "/yolu-dice-app/static/css/main.203630c6.css.map",
     "main.9031d98b.js.map": "/yolu-dice-app/static/js/main.9031d98b.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5e8d7fc.css",
+    "static/css/main.203630c6.css",
     "static/js/main.9031d98b.js"
   ]
 }
