@@ -217,7 +217,6 @@ body {
 }
 
 .marquee span {
-  text-transform: uppercase;
   will-change: transform;
   transform: translateX(0);
   white-space: nowrap;
