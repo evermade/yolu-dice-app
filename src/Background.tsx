@@ -1,8 +1,13 @@
 const Background = () => (
-  <div className="decorators">
-    <div className="decorator"></div>
-    <div className="decorator"></div>
-    <div className="decorator"></div>
+  <div className="background">
+    <div className="lines">
+      <div />
+      <div />
+      <div />
+    </div>
+    <div className="circle">
+      <div />
+    </div>
   </div>
 );
 

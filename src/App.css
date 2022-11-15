@@ -9,6 +9,7 @@ body {
   height: 200px;
   top: calc(50% - 100px);
   left: calc(50% - 100px);
+  z-index: 100;
 }
 
 .diceFace {
@@ -145,16 +146,89 @@ body {
     rotateY(var(--rotation));
 }
 
-.decorators {
+.background {
   height: 100vh;
   position: absolute;
   width: 100vw;
   z-index: -1;
+  overflow: hidden;
+}
+
+.background > div {
+  position: absolute;
   display: flex;
+  inset: 0 0 0 0;
+}
+
+.lines {
   justify-content: space-around;
 }
 
-.decorator {
+.lines > div {
   width: 1px;
   background-color: #d4d1d1;
+}
+
+.circle {
+  justify-content: center;
+  align-items: center;
+}
+
+.circle > div {
+  border-radius: 100%;
+  height: 66vh;
+  border: 1px solid #d4d1d1;
+  width: 66vh;
+  position: absolute;
+  margin: auto;
+}
+
+.logo {
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  max-width: 66vh;
+  margin: auto;
+  z-index: 150;
+}
+
+.logo > svg {
+  max-width: 100%;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  max-width: 66vh;
+  margin: auto;
+  gap: 0.2rem;
+}
+
+.marquee span {
+  text-transform: uppercase;
+  will-change: transform;
+  transform: translateX(0);
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+}
+
+.instructions {
+  position: absolute;
+  bottom: calc(50% - 17.5vh);
+  text-align: center;
+  left: 0;
+  right: 0;
+  pointer-events: none;
 }
