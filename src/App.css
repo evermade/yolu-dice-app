@@ -206,6 +206,7 @@ body {
   max-width: var(--wrapper-width);
   margin: auto;
   z-index: 150;
+  text-align: center;
 }
 
 .logo > svg {
